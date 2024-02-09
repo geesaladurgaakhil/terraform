@@ -6,11 +6,11 @@ variable "resource_group_location" {
 
 variable "resource_group_name_prefix" {
   type        = string
-  default     = "rg-akkiforsta"
+  default     = "rg-akkiforstakki"
   description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
 }
 variable "storage_account_name" {
     type = string
-    default = "akkistorageacc986690"
+    default = "akkistorageacc986690akki"
   
 }
