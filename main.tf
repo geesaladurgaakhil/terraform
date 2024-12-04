@@ -14,16 +14,16 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
+resource "azurerm_resource_group" "example1" {
+  name     = "example-resources1"
   location = "West Europe"
 }
 
-resource "azurerm_storage_account" "example" {
-  name                = "testarcsub65jdrf"
-  resource_group_name = azurerm_resource_group.example.name
+resource "azurerm_storage_account" "example1" {
+  name                = "testarcsub65jdrfnew"
+  resource_group_name = azurerm_resource_group.example1.name
 
-  location                 = azurerm_resource_group.example.location
+  location                 = azurerm_resource_group.example1.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
@@ -46,8 +46,8 @@ resource "azurerm_storage_account" "example" {
   }
 }
 
-resource "azurerm_storage_management_policy" "example" {
-  storage_account_id = azurerm_storage_account.example.id
+resource "azurerm_storage_management_policy" "example1" {
+  storage_account_id = azurerm_storage_account.example1.id
   rule {
     name    = "versiondelete"
     enabled = true
